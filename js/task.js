@@ -46,8 +46,10 @@ const sizeHamburger = {
       price: 100,
       calorie: 40
   	},
-  	__proto__: toppings,
 };
+
+Object.setPrototypeOf(sizeHamburger,toppings);
+Object.setPrototypeOf(Hamburger,sizeHamburger);
 
 function Hamburger(size) {
 
@@ -66,8 +68,6 @@ function Hamburger(size) {
     	break; 
 	}
 };
-
-Object.setPrototypeOf(Hamburger,sizeHamburger);
 
 Hamburger.prototype.addTopping = function(topping) {
 
