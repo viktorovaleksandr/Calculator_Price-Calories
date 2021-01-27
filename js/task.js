@@ -32,7 +32,7 @@ const toppings = {
    },
 };
 
-const sizeHamburger = {
+const hamburgerSize = {
 
    SIZE_SMALL: {
       price: 50,
@@ -48,49 +48,50 @@ const sizeHamburger = {
   	},
 };
 
-Object.setPrototypeOf(sizeHamburger,toppings);
-Object.setPrototypeOf(Hamburger,sizeHamburger);
+Object.setPrototypeOf(hamburgerSize,toppings);
 
 function Hamburger(size) {
 
 	switch(size) {
 		case SIZE_SMALL:
-    		this.price = sizeHamburger.SIZE_SMALL.price;
-			this.calorie = sizeHamburger.SIZE_SMALL.calorie;
+    		this.price = hamburgerSize.SIZE_SMALL.price;
+			this.calorie = hamburgerSize.SIZE_SMALL.calorie;
     		break;
   		case SIZE_MEDIUM:
-    		this.price = sizeHamburger.SIZE_MEDIUM.price;
-			this.calorie = sizeHamburger.SIZE_MEDIUM.calorie;
+    		this.price = hamburgerSize.SIZE_MEDIUM.price;
+			this.calorie = hamburgerSize.SIZE_MEDIUM.calorie;
     		break;
   		case SIZE_LARGE:
-    		this.price = sizeHamburger.SIZE_LARGE.price;
-			this.calorie = sizeHamburger.SIZE_LARGE.calorie;
+    		this.price = hamburgerSize.SIZE_LARGE.price;
+			this.calorie = hamburgerSize.SIZE_LARGE.calorie;
     	break; 
 	}
 };
+
+Object.setPrototypeOf(Hamburger,hamburgerSize);
 
 Hamburger.prototype.addTopping = function(topping) {
 
 	switch(topping) {
 		case TOPPING_CHEESE:
-    		this.price += sizeHamburger.TOPPING_CHEESE.price;
-			this.calorie += sizeHamburger.TOPPING_CHEESE.calorie;
+    		this.price += hamburgerSize.TOPPING_CHEESE.price;
+			this.calorie += hamburgerSize.TOPPING_CHEESE.calorie;
     		break;
   		case TOPPING_SALAD:
-    		this.price += sizeHamburger.TOPPING_SALAD.price;
-			this.calorie += sizeHamburger.TOPPING_SALAD.calorie;
+    		this.price += hamburgerSize.TOPPING_SALAD.price;
+			this.calorie += hamburgerSize.TOPPING_SALAD.calorie;
     		break;
   		case TOPPING_POTATO:
-    		this.price += sizeHamburger.TOPPING_POTATO.price;
-			this.calorie += sizeHamburger.TOPPING_POTATO.calorie;
+    		this.price += hamburgerSize.TOPPING_POTATO.price;
+			this.calorie += hamburgerSize.TOPPING_POTATO.calorie;
     		break;
     	case TOPPING_SEASONING:
-    		this.price += sizeHamburger.TOPPING_SEASONING.price;
-			this.calorie += sizeHamburger.TOPPING_SEASONING.calorie;
+    		this.price += hamburgerSize.TOPPING_SEASONING.price;
+			this.calorie += hamburgerSize.TOPPING_SEASONING.calorie;
     		break; 
     	case TOPPING_POTATO:
-    		this.price += sizeHamburger.TOPPING_POTATO.price;
-			this.calorie += sizeHamburger.TOPPING_POTATO.calorie;
+    		this.price += hamburgerSize.TOPPING_POTATO.price;
+			this.calorie += hamburgerSize.TOPPING_POTATO.calorie;
     	break;  
 	}
 };
