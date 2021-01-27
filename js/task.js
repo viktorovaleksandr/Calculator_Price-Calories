@@ -89,9 +89,9 @@ Hamburger.prototype.addTopping = function(topping) {
     		this.price += hamburgerSize.TOPPING_SEASONING.price;
 			this.calorie += hamburgerSize.TOPPING_SEASONING.calorie;
     		break; 
-    	case TOPPING_POTATO:
-    		this.price += hamburgerSize.TOPPING_POTATO.price;
-			this.calorie += hamburgerSize.TOPPING_POTATO.calorie;
+    	case TOPPING_MAYO:
+    		this.price += hamburgerSize.TOPPING_MAYO.price;
+			this.calorie += hamburgerSize.TOPPING_MAYO.calorie;
     	break;  
 	}
 };
