@@ -65,12 +65,11 @@ function Hamburger(size) {
     		this.price = hamburgerSize.SIZE_LARGE.price;
 			this.calorie = hamburgerSize.SIZE_LARGE.calorie;
     	break; 
-	}
-};
+	};
 
-Hamburger.prototype.addTopping = function(topping) {
+	this.addTopping = function(topping) {
 
-	switch(topping) {
+		switch(topping) {
 		case TOPPING_CHEESE:
     		this.price += hamburgerSize.TOPPING_CHEESE.price;
 			this.calorie += hamburgerSize.TOPPING_CHEESE.calorie;
@@ -90,16 +89,17 @@ Hamburger.prototype.addTopping = function(topping) {
     	case TOPPING_MAYO:
     		this.price += hamburgerSize.TOPPING_MAYO.price;
 			this.calorie += hamburgerSize.TOPPING_MAYO.calorie;
-    	break;  
-	}
-};
+    		break;  
+		}
+	};
 
-Hamburger.prototype.getPrice = function() {
-   console.log(`Hamburger price with sauce: ${this.price} тугриков`);
-};
+	this.getPrice = function() {
+   	console.log(`Hamburger price with sauce: ${this.price} тугриков`);
+	};
 
-Hamburger.prototype.getCallories = function() {
-   console.log(`Callories with sauce: ${this.calorie} калорий`);
+	this.getCallories = function() {
+   	console.log(`Callories with sauce: ${this.calorie} калорий`);
+	};
 };
 
 const hamburger = new Hamburger(SIZE_SMALL);
