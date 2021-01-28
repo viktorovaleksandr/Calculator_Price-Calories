@@ -68,8 +68,6 @@ function Hamburger(size) {
 	}
 };
 
-Object.setPrototypeOf(Hamburger,hamburgerSize);
-
 Hamburger.prototype.addTopping = function(topping) {
 
 	switch(topping) {
