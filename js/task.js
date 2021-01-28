@@ -8,6 +8,22 @@ const TOPPING_POTATO = 'TOPPING_POTATO';
 const TOPPING_SEASONING = 'TOPPING_SEASONING';
 const TOPPING_MAYO = 'TOPPING_MAYO';
 
+const hamburgerSize = {
+
+   SIZE_SMALL: {
+      price: 50,
+      calorie: 20
+   },
+   SIZE_MEDIUM: {
+      price: 70,
+      calorie: 30
+   },
+   SIZE_LARGE: {
+      price: 100,
+      calorie: 40
+  	},
+};
+
 const toppings = {
 	
    TOPPING_CHEESE: {
@@ -30,22 +46,6 @@ const toppings = {
    	price: 20,
       calorie: 5
    },
-};
-
-const hamburgerSize = {
-
-   SIZE_SMALL: {
-      price: 50,
-      calorie: 20
-   },
-   SIZE_MEDIUM: {
-      price: 70,
-      calorie: 30
-   },
-   SIZE_LARGE: {
-      price: 100,
-      calorie: 40
-  	},
 };
 
 Object.setPrototypeOf(hamburgerSize,toppings);
@@ -97,14 +97,15 @@ Hamburger.prototype.addTopping = function(topping) {
 };
 
 Hamburger.prototype.getPrice = function() {
-   console.log(`Price: ${this.price} тугриков`);
+   console.log(`Hamburger price with sauce: ${this.price} тугриков`);
 };
 
 Hamburger.prototype.getCallories = function() {
-   console.log(`Callories: ${this.calorie} калорий`);
+   console.log(`Callories with sauce: ${this.calorie} калорий`);
 };
 
 const hamburger = new Hamburger(SIZE_SMALL);
+
 hamburger.addTopping(TOPPING_MAYO);
 hamburger.addTopping(TOPPING_POTATO);
 
