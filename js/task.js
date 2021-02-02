@@ -48,8 +48,6 @@ const toppings = {
    },
 };
 
-Object.setPrototypeOf(hamburgerSize,toppings);
-
 function Hamburger(size) {
 
 	switch(size) {
@@ -71,24 +69,24 @@ function Hamburger(size) {
 
 		switch(topping) {
 		case TOPPING_CHEESE:
-    		this.price += hamburgerSize.TOPPING_CHEESE.price;
-			this.calorie += hamburgerSize.TOPPING_CHEESE.calorie;
+    		this.price += toppings.TOPPING_CHEESE.price;
+			this.calorie += toppings.TOPPING_CHEESE.calorie;
     		break;
   		case TOPPING_SALAD:
-    		this.price += hamburgerSize.TOPPING_SALAD.price;
-			this.calorie += hamburgerSize.TOPPING_SALAD.calorie;
+    		this.price += toppings.TOPPING_SALAD.price;
+			this.calorie += toppings.TOPPING_SALAD.calorie;
     		break;
   		case TOPPING_POTATO:
-    		this.price += hamburgerSize.TOPPING_POTATO.price;
-			this.calorie += hamburgerSize.TOPPING_POTATO.calorie;
+    		this.price += toppings.TOPPING_POTATO.price;
+			this.calorie += toppings.TOPPING_POTATO.calorie;
     		break;
     	case TOPPING_SEASONING:
-    		this.price += hamburgerSize.TOPPING_SEASONING.price;
-			this.calorie += hamburgerSize.TOPPING_SEASONING.calorie;
+    		this.price += toppings.TOPPING_SEASONING.price;
+			this.calorie += toppings.TOPPING_SEASONING.calorie;
     		break; 
     	case TOPPING_MAYO:
-    		this.price += hamburgerSize.TOPPING_MAYO.price;
-			this.calorie += hamburgerSize.TOPPING_MAYO.calorie;
+    		this.price += toppings.TOPPING_MAYO.price;
+			this.calorie += toppings.TOPPING_MAYO.calorie;
     		break;  
 		}
 	};
